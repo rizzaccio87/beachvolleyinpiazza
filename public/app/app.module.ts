@@ -6,6 +6,7 @@ import { HttpModule, RequestOptions } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routes';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   imports: [ 
@@ -14,7 +15,7 @@ import { AppRoutes } from './app.routes';
     HttpModule,
     RouterModule.forRoot(AppRoutes)
   ],
-  declarations: [ AppComponent ],
+  declarations: [ AppComponent, HomeComponent ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
