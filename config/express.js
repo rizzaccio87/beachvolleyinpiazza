@@ -29,11 +29,12 @@ module.exports = function() {
     secret: config.sessionSecret
   }));
 
-  app.set('views', './app/views');
+  var rootPath = path.normalize(__dirname) + '/../';
+  app.set('views', rootPath + '/app/views');
   app.set('view engine', 'ejs');
 
-  app.use('/', express.static(path.resolve('./public')));
-  app.use('/lib', express.static(path.resolve('./node_modules')));
+  app.use('/', express.static(path.resolve(rootPath + '/public')));
+  app.use('/lib', express.static(path.resolve(rootPath + '/node_modules')));
 
   require('../app/routes/index.server.routes.js')(app);
 
