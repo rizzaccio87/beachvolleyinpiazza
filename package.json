@@ -10,7 +10,8 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "app": "node server",
-    "start": "concurrently \"npm run tsc:w\" \"npm run app\" ",
+    "start": "npm run app",
+    "start-dev": "concurrently \"npm run tsc:w\" \"npm run app\" ",
     "postinstall": "typings install"
   },
   "dependencies": {
